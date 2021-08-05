@@ -1,0 +1,23 @@
+server:
+  port: 8030
+
+spring:
+  application:
+    name: product
+
+  sql:
+    init:
+      platform: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/product
+    username: postgres
+    password: mysecretpassword
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: public
+        format_sql: true
